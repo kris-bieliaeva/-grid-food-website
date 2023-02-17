@@ -4,6 +4,107 @@
 // font-family: 'Bebas Neue', cursive;
 // font-family: 'Montserrat', sans-serif;
 
+$main-color: #3d2514;
+
 * {
   box-sizing: border-box;
 }
+
+
+.header-bg {
+  background: url(images/bg.png) no-repeat center;
+  width: 100%;
+  height: 825px;
+  background-size: cover;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+  padding: 0px 55px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr 4fr 1fr;
+  grid-template-areas: 
+  "hd-logo hd-info"
+  ". hd-nav"
+  "hd-text hd-img"
+  ". hd-img";
+  align-items: center;
+  height: 825px;
+  color: $main-color;
+
+  &-logo {
+    grid-area: hd-logo;
+
+  }
+  &-info {
+    grid-area: hd-info;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    &-icon {
+      justify-self: end;
+      background: url(images/moped.png) no-repeat center;
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+
+    }
+    &-text{
+      justify-self: end;
+    }
+  }
+  &-nav {
+    grid-area: hd-nav;
+    justify-self: end;
+    font-family: 'Bebas Neue', cursive;
+
+    &-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $main-color;
+      font-size: 21px;
+      letter-spacing: 6px;
+      margin: 0px 30px;
+    }
+  }
+  &-text{
+    grid-area: hd-text;
+
+    &-top {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 23px;
+      font-weight: 100;
+      padding: 15px 20px;
+      border: 2px dashed $main-color;
+      margin-bottom: 50px;
+      display: inline-block;
+    }
+
+    &-title{
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 114px;
+      text-transform: uppercase;
+      line-height: 75px;
+      text-shadow: 5px 6px rgba(255, 255, 255, 0.75);
+      
+      span {
+        font-size: 56px;
+      }
+    }
+  }
+  &-img{
+    grid-area: hd-img;
+    background: url(images/bg-burger-menu.png) no-repeat bottom;
+    height: 632px;
+  }
+}
+
