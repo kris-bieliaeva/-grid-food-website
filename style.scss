@@ -6,6 +6,8 @@
 
 $main-color: #3d2514;
 $light-color: #ffffff;
+$acsent-color: #ffc045;
+$order-color: #bf2222;
 
 * {
   box-sizing: border-box;
@@ -149,6 +151,7 @@ $light-color: #ffffff;
 
     img {
       width: 100%;
+      cursor: pointer;
     }
 
     &-popular{
@@ -166,10 +169,140 @@ $light-color: #ffffff;
     &-text{
       position: absolute;
       z-index: 1;
-      padding: 15px;
+      padding: 5px;
       color: $light-color;
       text-transform: uppercase;
       font-family: 'Bebas Neue', cursive;
+
+      &-try {
+        font-size: 17px;
+      }
+
+      &-title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .banners-btn {
+    display: grid;
+    justify-content: center;
+  
+    button {
+      width: 222px;
+      height: 48px;
+      background-color: $acsent-color;
+      border-color: transparent;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 25px;
+      line-height: 48px;
+      color: $main-color;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $light-color;
+      border: 2px solid $main-color;
+    }
+  }
+
+// Choose & Enjoy Section
+
+.choose-text {
+text-align: center;
+padding: 30px 0px;
+}
+
+h2 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 50px;
+  color: $main-color;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  font-size: 37px;
+  color: $main-color;
+  margin-top: 30px;
+}
+
+.main-p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 500;
+  color: $main-color;
+  padding-top: 25px;
+}
+
+.choose {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+  align-items: baseline;
+  margin-top: 5px;
+  img {
+    max-width: 200px;
+  }
+
+ 
+}
+
+.order-btn {
+  background-color: $order-color;
+  border: transparent;
+  width: 196px;
+  height: 57px;
+  color: $light-color;
+  margin: 25px 0;
+  font-family: 'Alfa Slab One', cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.order-btn:hover {
+  background-color: $light-color;
+  border: 2px solid $order-color;
+  color: $order-color;
+  cursor: pointer;
+}
+
+@media (min-width:380px) {
+  .banners {
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.7fr 0.7fr;
+    grid-template-areas: 
+    "popular"
+    "fun"
+    "fresh";
+    gap: 15px;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &-popular{
+      grid-area: popular;
+    }
+
+    &-fun{
+      grid-area: fun;
+    }
+
+    &-fresh{
+      grid-area: fresh;
+    }
+
+    &-text{
+      padding: 15px;
 
       &-try {
         font-size: 20px;
@@ -180,8 +313,7 @@ $light-color: #ffffff;
       }
     }
   }
-
-
+}
 
 @media (min-width:576px) {
   .container {
@@ -192,6 +324,12 @@ $light-color: #ffffff;
   .header-img::before {
     bottom: 165px;
     scale: 76%;
+  }
+
+  .choose {
+    img {
+      max-width: 250px;
+    }
   }
 }
 
@@ -383,6 +521,13 @@ $light-color: #ffffff;
 
   &-text{
     padding: 30px;
+  }
+}
+
+.choose {
+  margin-top: 35px;
+  img {
+    max-width: 350px;
   }
 }
 }

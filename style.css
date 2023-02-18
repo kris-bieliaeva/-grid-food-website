@@ -122,6 +122,7 @@
 }
 .banners img {
   width: 100%;
+  cursor: pointer;
 }
 .banners-popular {
   grid-area: popular;
@@ -135,18 +136,132 @@
 .banners-text {
   position: absolute;
   z-index: 1;
-  padding: 15px;
+  padding: 5px;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
 }
 .banners-text-try {
-  font-size: 20px;
+  font-size: 17px;
 }
 .banners-text-title {
-  font-size: 35px;
+  font-size: 30px;
 }
 
+.banners-btn {
+  display: grid;
+  justify-content: center;
+}
+.banners-btn button {
+  width: 222px;
+  height: 48px;
+  background-color: #ffc045;
+  border-color: transparent;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  line-height: 48px;
+  color: #3d2514;
+  cursor: pointer;
+}
+.banners-btn button:hover {
+  background-color: #ffffff;
+  border: 2px solid #3d2514;
+}
+
+.choose-text {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+h2 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 50px;
+  color: #3d2514;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  font-size: 37px;
+  color: #3d2514;
+  margin-top: 30px;
+}
+
+.main-p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #3d2514;
+  padding-top: 25px;
+}
+
+.choose {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+  align-items: baseline;
+  margin-top: 5px;
+}
+.choose img {
+  max-width: 200px;
+}
+
+.order-btn {
+  background-color: #bf2222;
+  border: transparent;
+  width: 196px;
+  height: 57px;
+  color: #ffffff;
+  margin: 25px 0;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.order-btn:hover {
+  background-color: #ffffff;
+  border: 2px solid #bf2222;
+  color: #bf2222;
+  cursor: pointer;
+}
+
+@media (min-width: 380px) {
+  .banners {
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.7fr 0.7fr;
+    grid-template-areas: "popular" "fun" "fresh";
+    gap: 15px;
+  }
+  .banners img {
+    width: 100%;
+    cursor: pointer;
+  }
+  .banners-popular {
+    grid-area: popular;
+  }
+  .banners-fun {
+    grid-area: fun;
+  }
+  .banners-fresh {
+    grid-area: fresh;
+  }
+  .banners-text {
+    padding: 15px;
+  }
+  .banners-text-try {
+    font-size: 20px;
+  }
+  .banners-text-title {
+    font-size: 35px;
+  }
+}
 @media (min-width: 576px) {
   .container {
     width: 576px;
@@ -155,6 +270,9 @@
   .header-img::before {
     bottom: 165px;
     scale: 76%;
+  }
+  .choose img {
+    max-width: 250px;
   }
 }
 @media (min-width: 768px) {
@@ -293,6 +411,12 @@
   }
   .banners-text {
     padding: 30px;
+  }
+  .choose {
+    margin-top: 35px;
+  }
+  .choose img {
+    max-width: 350px;
   }
 }
 @media (min-width: 1440px) {
