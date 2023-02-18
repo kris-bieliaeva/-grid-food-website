@@ -112,6 +112,41 @@
   scale: 70%;
 }
 
+.banners {
+  padding: 35px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 0.7fr 0.7fr;
+  grid-template-areas: "popular" "fun" "fresh";
+  gap: 15px;
+}
+.banners img {
+  width: 100%;
+}
+.banners-popular {
+  grid-area: popular;
+}
+.banners-fun {
+  grid-area: fun;
+}
+.banners-fresh {
+  grid-area: fresh;
+}
+.banners-text {
+  position: absolute;
+  z-index: 1;
+  padding: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+}
+.banners-text-try {
+  font-size: 20px;
+}
+.banners-text-title {
+  font-size: 35px;
+}
+
 @media (min-width: 576px) {
   .container {
     width: 576px;
@@ -161,6 +196,15 @@
     left: -50px;
     scale: 66%;
   }
+  .banners-text {
+    padding: 30px;
+  }
+  .banners-text-try {
+    font-size: 25px;
+  }
+  .banners-text-title {
+    font-size: 41px;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -198,6 +242,16 @@
     scale: 80%;
     left: 0px;
   }
+  .banners {
+    padding: 35px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "popular fun" "popular fresh";
+    gap: 25px;
+  }
+  .banners-text {
+    padding: 15px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -233,6 +287,12 @@
     bottom: -21px;
     left: 37px;
     scale: 100%;
+  }
+  .banners {
+    gap: 30px;
+  }
+  .banners-text {
+    padding: 30px;
   }
 }
 @media (min-width: 1440px) {

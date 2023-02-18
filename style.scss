@@ -5,11 +5,11 @@
 // font-family: 'Montserrat', sans-serif;
 
 $main-color: #3d2514;
+$light-color: #ffffff;
 
 * {
   box-sizing: border-box;
 }
-
 
 .header-bg {
   background: url(images/bg.png) no-repeat center;
@@ -17,7 +17,6 @@ $main-color: #3d2514;
   max-height: 825px;
   background-size: cover;
 }
-
 
 .container {
   width: 100%;
@@ -134,8 +133,55 @@ $main-color: #3d2514;
     left: 5px;
     z-index: 1;
     scale: 70%;
-  }}
-  
+  }} 
+
+  // Banners section
+  .banners {
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.7fr 0.7fr;
+    grid-template-areas: 
+    "popular"
+    "fun"
+    "fresh";
+    gap: 15px;
+
+    img {
+      width: 100%;
+    }
+
+    &-popular{
+      grid-area: popular;
+    }
+
+    &-fun{
+      grid-area: fun;
+    }
+
+    &-fresh{
+      grid-area: fresh;
+    }
+
+    &-text{
+      position: absolute;
+      z-index: 1;
+      padding: 15px;
+      color: $light-color;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+
+      &-try {
+        font-size: 20px;
+      }
+
+      &-title {
+        font-size: 35px;
+      }
+    }
+  }
+
+
 
 @media (min-width:576px) {
   .container {
@@ -205,8 +251,22 @@ $main-color: #3d2514;
     }
     
   }
-}
 
+  .banners {
+
+    &-text{
+      padding: 30px;
+
+      &-try {
+        font-size: 25px;
+      }
+
+      &-title {
+        font-size: 41px;
+      }
+    }
+  }
+}
 
 @media (min-width:992px) {
 
@@ -252,8 +312,21 @@ $main-color: #3d2514;
         left: 0px;
       }
   }
-}
 
+  .banners {
+    padding: 35px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "popular fun"
+    "popular fresh";
+    gap: 25px;
+  
+    &-text{
+      padding: 15px;
+    }
+  }
+}
 
 @media (min-width:1200px) {
   .container {
@@ -303,7 +376,16 @@ $main-color: #3d2514;
         left: 37px;
         scale: 100%;
       }
-}}
+}
+
+.banners {
+  gap: 30px;
+
+  &-text{
+    padding: 30px;
+  }
+}
+}
 
 @media (min-width:1440px) {
   .container {
@@ -328,4 +410,5 @@ $main-color: #3d2514;
     }
   }
 }
+
 
