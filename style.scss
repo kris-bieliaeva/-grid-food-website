@@ -5,9 +5,11 @@
 // font-family: 'Montserrat', sans-serif;
 
 $main-color: #3d2514;
+$other-text: #3d3d3d;
 $light-color: #ffffff;
 $acsent-color: #ffc045;
 $order-color: #bf2222;
+$inactive-color: #dcdcdc;
 
 * {
   box-sizing: border-box;
@@ -216,7 +218,7 @@ padding: 30px 0px;
 
 h2 {
   font-family: 'Alfa Slab One', cursive;
-  font-size: 50px;
+  font-size: 3.15rem;
   color: $main-color;
   text-transform: uppercase;
 }
@@ -231,7 +233,7 @@ h3 {
 
 .main-p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
+  font-size: 1.05rem;
   line-height: 29px;
   font-weight: 500;
   color: $main-color;
@@ -245,11 +247,15 @@ h3 {
   text-align: center;
   align-items: baseline;
   margin-top: 5px;
+
+  &-burger {
+    p {
+      line-height: 1.4rem;
+    }
+  }
   img {
     max-width: 200px;
   }
-
- 
 }
 
 .order-btn {
@@ -270,6 +276,80 @@ h3 {
   border: 2px solid $order-color;
   color: $order-color;
   cursor: pointer;
+}
+
+// Events section
+
+h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  font-size: 1.85rem;
+  letter-spacing: 3px;
+
+}
+
+.events {
+  display: grid;
+  justify-content: center;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 3fr 1fr 0.3fr;
+  grid-template-areas: 
+  "ev-text"
+  "ev-img"
+  "ev-dots";
+  gap: 20px;
+  box-shadow: 5px 6px 50px 0px #aeacac;
+  padding: 40px 35px 25px 35px;
+
+  &-text {
+    grid-area: ev-text;
+    text-align: center;
+
+    &-h4 {
+      color: $other-text;
+      margin-bottom: 10px;
+
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      color:$other-text;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-img {
+    grid-area: ev-img;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.dots {
+  grid-area: ev-dots;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 20px));
+}
+
+.dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color:$inactive-color;
+}
+
+.dot-active {
+  background-color: $acsent-color;
 }
 
 @media (min-width:380px) {
@@ -529,6 +609,25 @@ h3 {
   img {
     max-width: 350px;
   }
+}
+
+.events {
+    grid-template-columns: 1.05fr 1fr;
+    margin: auto;
+    max-width: 90%;
+    padding: 40px 15px 35px 55px;
+    grid-template-areas: 
+    "ev-text ev-img"
+    "ev-text ev-img"
+    "ev-dots ev-img";
+
+    &-text {
+      text-align: left;
+    }
+}
+
+.dots {
+  justify-content: start;
 }
 }
 

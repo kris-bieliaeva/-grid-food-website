@@ -176,7 +176,7 @@
 
 h2 {
   font-family: "Alfa Slab One", cursive;
-  font-size: 50px;
+  font-size: 3.15rem;
   color: #3d2514;
   text-transform: uppercase;
 }
@@ -191,7 +191,7 @@ h3 {
 
 .main-p {
   font-family: "Montserrat", sans-serif;
-  font-size: 17px;
+  font-size: 1.05rem;
   line-height: 29px;
   font-weight: 500;
   color: #3d2514;
@@ -205,6 +205,9 @@ h3 {
   text-align: center;
   align-items: baseline;
   margin-top: 5px;
+}
+.choose-burger p {
+  line-height: 1.4rem;
 }
 .choose img {
   max-width: 200px;
@@ -228,6 +231,66 @@ h3 {
   border: 2px solid #bf2222;
   color: #bf2222;
   cursor: pointer;
+}
+
+h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  font-size: 1.85rem;
+  letter-spacing: 3px;
+}
+
+.events {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "ev-text" "ev-img" "ev-dots";
+  gap: 20px;
+  box-shadow: 5px 6px 50px 0px #aeacac;
+  padding: 40px 35px 25px 35px;
+}
+.events-text {
+  grid-area: ev-text;
+  text-align: center;
+}
+.events-text-h4 {
+  color: #3d3d3d;
+  margin-bottom: 10px;
+}
+.events-text h2 {
+  font-size: 2.5rem;
+}
+.events-text p {
+  color: #3d3d3d;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin-bottom: 15px;
+}
+.events-img {
+  grid-area: ev-img;
+}
+.events img {
+  width: 100%;
+}
+
+.dots {
+  grid-area: ev-dots;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 20px));
+}
+
+.dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: #dcdcdc;
+}
+
+.dot-active {
+  background-color: #ffc045;
 }
 
 @media (min-width: 380px) {
@@ -417,6 +480,19 @@ h3 {
   }
   .choose img {
     max-width: 350px;
+  }
+  .events {
+    grid-template-columns: 1.05fr 1fr;
+    margin: auto;
+    max-width: 90%;
+    padding: 40px 15px 35px 55px;
+    grid-template-areas: "ev-text ev-img" "ev-text ev-img" "ev-dots ev-img";
+  }
+  .events-text {
+    text-align: left;
+  }
+  .dots {
+    justify-content: start;
   }
 }
 @media (min-width: 1440px) {
