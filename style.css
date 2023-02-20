@@ -297,8 +297,28 @@ h4 {
   background-color: #ffc045;
 }
 
+.form-bg {
+  position: relative;
+}
+
+.form-bg-image1, .form-bg-image3 {
+  position: absolute;
+}
+
+.form-bg-image1 {
+  max-width: 175px;
+}
+
+.form-bg-image3 {
+  right: 0;
+  bottom: 0;
+  max-width: 120px;
+}
+
 .form {
   display: grid;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 .form-text {
   text-align: center;
@@ -397,6 +417,12 @@ h4 {
   .choose img {
     max-width: 250px;
   }
+  .form-bg-image1 {
+    max-width: 250px;
+  }
+  .form-bg-image3 {
+    max-width: 220px;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -445,6 +471,9 @@ h4 {
   }
   .banners-text-title {
     font-size: 41px;
+  }
+  .form-bg-image3 {
+    max-width: 220px;
   }
 }
 @media (min-width: 992px) {
@@ -497,7 +526,8 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    margin-top: 50px;
+    margin: 50px auto;
+    width: 790px;
   }
   .form-box input {
     background-color: #fff;
@@ -519,6 +549,9 @@ h4 {
     font-size: 1.3rem;
     color: #3d3d3d;
     line-height: 66px;
+  }
+  .form-bg-image1 {
+    max-width: 300px;
   }
 }
 @media (min-width: 1200px) {
@@ -581,6 +614,9 @@ h4 {
   .dots {
     justify-content: start;
   }
+  .form-bg-image3 {
+    max-width: 280px;
+  }
 }
 @media (min-width: 1440px) {
   .container {
@@ -597,5 +633,11 @@ h4 {
   .header-img::before {
     bottom: 62px;
     left: 117px;
+  }
+  .form-bg-image1 {
+    max-width: 100%;
+  }
+  .form-bg-image3 {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
