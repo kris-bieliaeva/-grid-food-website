@@ -360,12 +360,16 @@ h4 {
   position: relative;
 }
 
-.form-bg-image1, .form-bg-image3 {
+.form-bg-image1, .form-bg-image2, .form-bg-image3 {
   position: absolute;
 }
 
 .form-bg-image1{
   max-width: 175px;
+}
+
+.form-bg-image2 {
+display: none;
 }
 
 .form-bg-image3 {
@@ -665,6 +669,7 @@ h4 {
   .form-bg-image1 {
     max-width: 300px;
   }
+
 }
 
 @media (min-width:1200px) {
@@ -754,6 +759,13 @@ h4 {
 .form-bg-image3 {
   max-width: 280px;
 }
+
+
+.form-bg-image2 {
+  display: block;
+  bottom: 12%;
+  left: 2%;
+}
 }
 
 @media (min-width:1440px) {
@@ -783,9 +795,17 @@ h4 {
     max-width: 100%;
   }
 
+  .form-bg-image2 {
+    bottom: 12%;
+    left: 10%;
+  }
+
   .form-bg-image3 {
     max-width: 100%;
   }
+
+  
+  
 }
 
 
