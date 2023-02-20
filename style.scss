@@ -15,6 +15,10 @@ $inactive-color: #dcdcdc;
   box-sizing: border-box;
 }
 
+button {
+  transition: .5s ease-in-out;
+}
+
 .header-bg {
   background: url(images/bg.png) no-repeat center;
   width: 100%;
@@ -282,7 +286,7 @@ h3 {
 
 h4 {
   font-family: 'Bebas Neue', cursive;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.85rem;
   letter-spacing: 3px;
 
@@ -291,8 +295,6 @@ h4 {
 .events {
   display: grid;
   justify-content: center;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 3fr 1fr 0.3fr;
   grid-template-areas: 
   "ev-text"
   "ev-img"
@@ -350,6 +352,62 @@ h4 {
 
 .dot-active {
   background-color: $acsent-color;
+}
+
+// Form
+
+.form {
+  display: grid;
+
+  &-text {
+  text-align: center;
+
+    h4 {
+      color: $main-color;
+      margin-bottom: 20px;
+    }
+  }
+  &-box {
+    display: grid;
+    gap: 25px;
+    margin-top: 50px;
+
+    input {
+      background-color: #fff;
+      border: 0.5px solid #bebebe;
+      border-radius: 5px;
+      padding: 22px 22px;
+      height: 70px;
+      
+    }
+
+    ::placeholder {
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.3rem;
+      color: $other-text;
+      line-height: 66px;
+    }
+  }
+}
+
+.find-btn {
+  background-color: $order-color;
+  height: 70px;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $light-color;
+  font-size: 1.3rem;
+  font-family: 'Alfa Slab One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.find-btn:hover {
+  border: 2px solid $order-color;
+  background-color: #fff;
+  color: $order-color;
 }
 
 @media (min-width:380px) {
@@ -542,6 +600,30 @@ h4 {
   
     &-text{
       padding: 15px;
+    }
+  }
+
+  .form-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 50px;
+
+    input {
+      background-color: #fff;
+      border: 0.5px solid #bebebe;
+      border-radius: 5px;
+      padding: 22px 22px;
+      height: 70px;
+      
+    }
+
+    ::placeholder {
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.3rem;
+      color: $other-text;
+      line-height: 66px;
     }
   }
 }
