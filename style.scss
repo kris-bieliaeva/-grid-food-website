@@ -415,8 +415,6 @@ display: none;
   }
 }
 
-
-
 .find-btn {
   background-color: $order-color;
   height: 70px;
@@ -434,6 +432,122 @@ display: none;
   border: 2px solid $order-color;
   background-color: #fff;
   color: $order-color;
+}
+
+// Footer
+
+.footer {
+  background: url(images/Burger-Image5.png) no-repeat center;
+  width: 100%;
+  height: 100%;
+  padding: 46px 10% 0px 10%;
+  margin-top:-50px;
+  display: grid;
+  grid-template-areas:
+  "ft-text"
+  "social"
+  "social-icons"
+  "rights";
+  justify-content: center;
+
+  &-text {
+    grid-area: ft-text;
+  }
+
+  &-logo {
+    width: 100%;
+  }
+
+  &-description {
+    color: $light-color;
+    line-height: 1.05rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .rights {
+    grid-area: rights;
+    font-family: 'Bebas Neue', cursive;
+    color: $light-color;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &-social {
+    grid-area: social;
+    margin-top: 30px;
+
+    &-contacts {
+      font-family: "Bebas Neue", cursive;
+      font-size: 1.15rem;
+      color: $light-color;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 15px;
+      justify-content: center;
+      
+      span {
+        display: block;
+      }
+
+      .address {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+        align-items: center;
+
+        &-icon {
+          background: url(images/location-icon.png) no-repeat center;
+          height: 40px;
+          
+        }
+      }
+
+      .email {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+        align-items: center;
+      
+
+        &-icon {
+          background: url(images/email-icon.png) no-repeat center;
+          height: 30px;
+          
+        }
+      }
+    }
+  }
+
+  .footer-social-icons {
+      display: grid;
+      grid-area: social-icons;
+      grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+      justify-content: center;
+      gap: 5px;   
+      margin-top: 15px;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+
+    .instagram {
+      background: url(images/instagram-icon.png) no-repeat center;
+    }
+
+    .facebook {
+      background: url(images/facebook-icon.png) no-repeat center;
+    }
+
+    .twitter {
+      background: url(images/twitter-icon.png) no-repeat center;
+    }
+
+    .whatsapp {
+      background: url(images/whatsapp-icon.png) no-repeat center;
+    }
+  }
 }
 
 @media (min-width:380px) {
@@ -580,6 +694,58 @@ display: none;
   .form-bg-image3 {
     max-width: 220px;
   }
+
+  .footer {
+    padding: 46px 40px 5px 40px;
+    margin-top:-50px;
+    height: 525px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "ft-text social"
+    "ft-text social"
+    "rights social-icons";
+  
+    &-text {
+    }
+  
+    &-logo {
+      width: 100%;
+    }
+  
+    &-description { 
+      line-height: 1.5rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+  
+    .rights {
+      font-size: 0.8rem;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  
+    &-social {
+      &-contacts {
+        font-size: 1.15rem;
+        color: $light-color;
+        display: grid;
+        gap: 10px;
+        margin-bottom: 15px;
+        justify-content: center;
+      }
+    }
+  
+    .footer-social-icons {
+        display: grid;
+        grid-area: social-icons;
+        grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+        gap: 5px;   
+        margin-top: 15px;
+        justify-content: end;
+    }
+  }
+  
 }
 
 @media (min-width:992px) {
@@ -765,6 +931,42 @@ display: none;
   display: block;
   bottom: 12%;
   left: 2%;
+}
+
+.footer {
+  padding: 46px 40px 5px 40px;
+  margin-top:-160px;
+  height: 525px;
+  align-items: center;
+  grid-template-columns: 1.2fr 0.6fr 1.2fr;
+  grid-template-areas:
+  "ft-text . ."
+  "ft-text . social"
+  "rights . social-icons";
+
+  &-text {
+  }
+
+  &-logo {
+    width: 70%;
+  }
+
+  &-description { 
+    margin-top: 50px;
+  }
+
+  .rights {
+    font-size: 1.03rem;
+  }
+
+  &-social {
+    align-self: baseline;
+    &-contacts {
+      .address {
+        max-width: 500px;
+      }
+    }
+  }
 }
 }
 
