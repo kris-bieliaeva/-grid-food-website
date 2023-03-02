@@ -35,3 +35,37 @@ anchorLinks.forEach((link) => {
     });
   });
 });
+
+// SLIDER
+// const swiper = new Swiper(".mySwiper", {
+//   effect: "cube",
+//   grabCursor: true,
+//   cubeEffect: {
+//     shadow: true,
+//     slideShadows: true,
+//     shadowOffset: 20,
+//     shadowScale: 0.94,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 150,
+  grabCursor: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+});
