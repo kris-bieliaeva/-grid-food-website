@@ -158,7 +158,8 @@ button {
   justify-content: center;
 }
 .banners-btn button {
-  width: 222px;
+  width: 100%;
+  padding: 0 20px;
   height: 48px;
   background-color: #ffc045;
   border-color: transparent;
