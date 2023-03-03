@@ -159,14 +159,13 @@ button {
 }
 .banners-btn button {
   width: 100%;
-  padding: 0 20px;
-  height: 48px;
+  padding: 10px 20px;
+  height: 100%;
   background-color: #ffc045;
   border-color: transparent;
   text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
-  font-size: 25px;
-  line-height: 48px;
+  font-size: 1rem;
   color: #3d2514;
   cursor: pointer;
 }
@@ -175,16 +174,19 @@ button {
   border: 2px solid #3d2514;
 }
 
-.choose-text {
-  text-align: center;
-  padding: 30px 0px;
-}
-
 h2 {
   font-family: "Alfa Slab One", cursive;
   font-size: 3.15rem;
   color: #3d2514;
   text-transform: uppercase;
+}
+
+.choose-text {
+  text-align: center;
+  padding: 30px 0px;
+}
+.choose-text h2 {
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -583,6 +585,15 @@ h4 {
   .banners-text-title {
     font-size: 35px;
   }
+  .choose-text h2 {
+    font-size: 2.5rem;
+  }
+  .banners-btn button {
+    width: 100%;
+    padding: 10px 20px;
+    height: 100%;
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 576px) {
   .container {
@@ -608,6 +619,9 @@ h4 {
     color: #3d3d3d;
     font-size: 1.3rem;
     line-height: 2rem;
+  }
+  .choose-text h2 {
+    font-size: 3.15rem;
   }
 }
 @media (min-width: 768px) {
